@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
-// import usePageTitle from './usePageTitle'; // import the custom hook
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 function Home() {
-  // usePageTitle(); // Call it here to set title
-  useEffect(() => {
-    document.title = 'About Us - React App';
-  }, []);
-
   return (
     <div>
+      <Helmet>
+        <title>About Us - React App</title>
+      </Helmet>
       <h1>Welcome to the Homepage!</h1>
     </div>
   );
