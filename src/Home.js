@@ -7,7 +7,7 @@ function Home() {
       <Helmet>
         <title>About Us - React App</title>
       </Helmet>
-      <h1>Welcome to the Homepage!</h1>
+      <h1>Welcome to the Homepag!</h1>
     </div>
   );
 }
