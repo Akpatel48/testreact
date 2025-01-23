@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
 function Home() {
+  useEffect(() => {
+    console.log('Title is updated');
+  }, []);
+
   return (
     <div>
       <Helmet>
-        <meta name="description" content="Welcome to the homepage of my React app!" />
         <title>Home - React App</title>
       </Helmet>
-      <h1>Welcome to the Homepage!</h1>
+      <h1>Welcome to the Home Page!</h1>
     </div>
   );
 }
