@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Change Switch to Routes
 import { Helmet } from 'react-helmet';
 
 // Import your components
@@ -10,6 +10,11 @@ function App() {
   return (
     <Router>
       <div>
+        {/* Navigation Links */}
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/about">About</Link>
+        </nav>
+
         {/* Global Meta Tags for the app */}
         <Helmet>
           <meta charset="UTF-8" />
@@ -19,10 +24,10 @@ function App() {
         </Helmet>
 
         {/* Define Routes */}
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-        </Switch>
+        <Routes> {/* Use Routes instead of Switch */}
+          <Route path="/" element={<Home />} /> {/* Use 'element' prop */}
+          <Route path="/about" element={<About />} /> {/* Use 'element' prop */}
+        </Routes>
       </div>
     </Router>
   );
